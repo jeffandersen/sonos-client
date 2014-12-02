@@ -58,3 +58,4 @@ The following actions are currently zupported for both zones and players:
 - shuffle
 - repeat
 - playlists
+- clearQueue
