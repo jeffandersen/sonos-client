@@ -1,3 +1,11 @@
-var sonosClient = exports; exports.constructor = function sonosClient(){};
+/*jshint browser: true*/
 
-sonosClient.v1 = require('./lib/v1');
+var sonos = exports; exports.constructor = function sonos(){};
+
+sonos.browserLoaded = (typeof window !== 'undefined');
+
+sonos.v1 = require('./lib/v1');
+
+if (sonos.browserLoaded) {
+  window.Sonos = sonos;
+}
